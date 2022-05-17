@@ -18,7 +18,6 @@ steps:
       - sed -i "s/ /+/g" test_case_temp_file
       - base64 --decode ./test_case_temp_file > cypress/integration/tests.js
       - npm install
-      - npm start
       - npm test
   - name: result
     image: node
